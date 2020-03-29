@@ -28,6 +28,7 @@ public class Main {
     Phone iphone = new Phone("Apple", "6s", 4.7);
     Phone motorola = new Phone("Motorola", "G6", 2.22);
 
+
     Human me = new Human();
     me.firstName = "Kacper";
     me.lastName = "Warda";
@@ -68,5 +69,8 @@ public class Main {
 
 
     System.out.println("test");
+    gordo.feed();
+    dog.feed("karma");
+
   }
 }

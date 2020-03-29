@@ -8,6 +8,7 @@ public class Animal implements Soldable, Edible {
   private Double weight;
   public String name;
   File pic;
+  private boolean alive;
 
   private static Double NEW_DOG_WEIGHT = 4.0;
   private static Double NEW_LION_WEIGHT = 39.2;
@@ -40,6 +41,12 @@ public class Animal implements Soldable, Edible {
     } else {
       ++weight;
       System.out.println(name + " says thx for food");
+    }
+  }
+
+  public void feed(String food) {
+    if (alive) {
+      System.out.println("Thanks for " + food);
     }
   }
 

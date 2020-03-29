@@ -34,5 +34,9 @@ public class Human extends Animal {
     return firstName;
   }
 
-
+  public void feed(String food) {
+    if () {
+      System.out.println("Thanks for " + food);
+    }
+  }
 }
