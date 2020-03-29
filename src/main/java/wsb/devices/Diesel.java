@@ -7,11 +7,15 @@ public class Diesel extends Car {
 
   @Override
   public String toString() {
-    return super.toString();
+    return "The producer is: " + producer +
+        " \nThe model is: " + model +
+        "\nThe year of production is:  " + yearOfProduction
+        + " \nThe size of engine is: " + sizeOfAnEngine;
   }
 
   @Override
-  public void Refuel() {
+  public void refuel() {
+    System.out.println(this + "\nNow your tank is full of diesel");
 
   }
 }

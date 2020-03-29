@@ -11,7 +11,7 @@ public class ElectricCar extends Car {
   }
 
   @Override
-  public void Refuel() {
-
+  public void refuel() {
+    System.out.println("Now your battery is charged");
   }
 }

@@ -13,7 +13,7 @@ public abstract class Car extends Device {
     this.sizeOfAnEngine = sizeOfAnEngine;
   }
 
-  public abstract void Refuel();
+  public abstract void refuel();
 
   @Override
   public void turnOn() {

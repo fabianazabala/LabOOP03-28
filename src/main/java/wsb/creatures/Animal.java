@@ -40,7 +40,7 @@ public class Animal implements Soldable, Edible, Feedable {
       System.out.println("too late, " + name + " is dead");
     } else {
       ++weight;
-      System.out.println(name + " says thx for food");
+      System.out.println(name + " says thanks for food");
     }
   }
 

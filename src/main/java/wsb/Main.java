@@ -3,18 +3,29 @@ package wsb;
 import wsb.creatures.Animal;
 import wsb.creatures.Human;
 import wsb.devices.Car;
+import wsb.devices.Diesel;
+import wsb.devices.ElectricCar;
 import wsb.devices.Phone;
 
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    secondMain();
+    fourthMain();
   }
 
-  private static void thirdMain() {
-    Animal dog = new Animal;
-    Human gordo = new Human;
+  private static void fourthMain() {
 
+    Car diesel = new Diesel("BMW", "runner", 2019, 30.30);
+    Car electricCar = new ElectricCar("Testla", "brilliant", 2020, 66.25);
+
+    diesel.refuel();
+    electricCar.refuel();
+
+  }
+  private static void thirdMain() {
+    Animal dog = new Animal("pug");
+    Human gordo = new Human();
+    gordo.name = "Victor";
     gordo.feed();
     dog.feed("karma");
 
@@ -25,7 +36,7 @@ public class Main {
     Human seller = new Human();
     double price = 10;
 
-    Car mercedes = new Car("mercedes", "no se", 2020, 120.0);
+    Car mercedes = new Diesel("mercedes", "no se", 2020, 120.0);
 
     mercedes.sell(buyer, seller, price);
   }
@@ -61,7 +72,7 @@ public class Main {
     me.pet.takeForAWalk();
     me.pet.takeForAWalk();
 
-    Car dirtyOne = new Car("fiat", "bravo", 2014, 1.6);
+    Car dirtyOne = new Diesel("fiat", "bravo", 2014, 1.6);
     dirtyOne.plates = "GDA2314";
     me.car = dirtyOne;
     System.out.println(me.car.producer + " " + me.car.model + " " + me.car.plates);
