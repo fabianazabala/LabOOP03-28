@@ -11,6 +11,15 @@ public class Main {
     secondMain();
   }
 
+  private static void thirdMain() {
+    Animal dog = new Animal;
+    Human gordo = new Human;
+
+    gordo.feed();
+    dog.feed("karma");
+
+  }
+
   private static void secondMain() {
     Human buyer = new Human();
     Human seller = new Human();
@@ -69,8 +78,7 @@ public class Main {
 
 
     System.out.println("test");
-    gordo.feed();
-    dog.feed("karma");
+
 
   }
 }

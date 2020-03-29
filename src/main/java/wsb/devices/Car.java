@@ -2,7 +2,7 @@ package wsb.devices;
 
 import wsb.creatures.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
   public final Integer yearOfProduction;
   public final Double sizeOfAnEngine;
   public String plates;
@@ -11,8 +11,9 @@ public class Car extends Device {
     super(producer, model);
     this.yearOfProduction = yearOfProduction;
     this.sizeOfAnEngine = sizeOfAnEngine;
-
   }
+
+  public abstract void Refuel();
 
   @Override
   public void turnOn() {

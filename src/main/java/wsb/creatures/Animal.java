@@ -3,7 +3,7 @@ package wsb.creatures;
 import java.io.File;
 import wsb.devices.Soldable;
 
-public class Animal implements Soldable, Edible {
+public class Animal implements Soldable, Edible, Feedable {
   final String species;
   private Double weight;
   public String name;
@@ -42,6 +42,11 @@ public class Animal implements Soldable, Edible {
       ++weight;
       System.out.println(name + " says thx for food");
     }
+  }
+
+  @Override
+  public void feed(Double foodWeight) {
+
   }
 
   public void feed(String food) {
