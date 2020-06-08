@@ -1,5 +1,6 @@
 package wsb;
 
+import java.util.Arrays;
 import wsb.creatures.Animal;
 import wsb.creatures.Human;
 import wsb.devices.Car;
@@ -16,7 +17,7 @@ public class Main {
   private static void fourthMain() {
 
     Car diesel = new Diesel("BMW", "runner", 2019, 30.30);
-    Car electricCar = new ElectricCar("Testla", "brilliant", 2020, 66.25);
+    Car electricCar = new ElectricCar("Tesla", "brilliant", 2020, 66.25);
 
     diesel.refuel();
     electricCar.refuel();
@@ -43,15 +44,15 @@ public class Main {
 
   private static void firstMain() throws Exception {
     Animal dog = new Animal("dog");
-    dog.name = "Akita";
+    dog.name = "Pepe";
 
     Phone iphone = new Phone("Apple", "6s", 4.7);
     Phone motorola = new Phone("Motorola", "G6", 2.22);
 
 
     Human me = new Human();
-    me.firstName = "Kacper";
-    me.lastName = "Warda";
+    me.firstName = "Fabiana";
+    me.lastName = "Zabala";
     me.pet = dog;
     me.mobile = iphone;
 
@@ -61,7 +62,7 @@ public class Main {
     gordo.pet = dog;
     gordo.mobile = motorola;
 
-    System.out.println("It is same car " + (me.car == gordo.car));
+    System.out.println("It is the same car " + (me.car == gordo.car));
 
 
     me.pet.feed();
@@ -90,6 +91,18 @@ public class Main {
 
     System.out.println("test");
 
+
+   String[] names = {"Fabiana", "Victor", "Elto"};
+   Integer[] number = {2314, 3212, -2212};
+
+   for(int i = 0; i<names.length; i++){
+
+   }
+    Arrays.sort(names);
+    System.out.println(Arrays.toString(names));
+
+    Arrays.sort(number);
+    System.out.println(Arrays.toString(number));
 
   }
 }

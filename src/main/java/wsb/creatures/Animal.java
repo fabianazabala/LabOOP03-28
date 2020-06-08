@@ -15,7 +15,7 @@ public class Animal implements Soldable, Edible, Feedable {
   private static Double NEW_OTHER_ANIMAL_WEIGHT = 5.3;
 
   public Animal(String species) {
-    System.out.println("we created new Animal");
+    System.out.println("we have created new Animal");
     this.species = species;
 
     switch (species) {
@@ -60,10 +60,10 @@ public class Animal implements Soldable, Edible, Feedable {
       System.out.println("you can't walk the street with dead animal you freak");
     } else if (weight > 3.0) {
       --weight;
-      System.out.println(name + " says thx for a walk");
+      System.out.println(name + " says thanks for a walk");
     } else if (weight > 1.0) {
       --weight;
-      System.out.println(name + " says thx for a walk but I'm hungry");
+      System.out.println(name + " says thanks for a walk but I'm hungry");
     } else {
       weight = 0.0;
       System.out.println(name + " died");
@@ -77,11 +77,11 @@ public class Animal implements Soldable, Edible, Feedable {
 
   @Override
   public void sell(Human buyer, Human seller, double price) throws Exception {
-    System.out.println("now gimme the money");
+    System.out.println("now give me the money");
   }
 
   @Override
   public void eat() throws Exception {
-    System.out.println("that was yuammy");
+    System.out.println("that was yummy");
   }
 }
