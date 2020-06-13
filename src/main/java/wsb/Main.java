@@ -11,7 +11,7 @@ import wsb.devices.Phone;
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    fourthMain();
+    secondTask();
   }
 
   private static void fourthMain() {
@@ -23,23 +23,31 @@ public class Main {
     electricCar.refuel();
 
   }
+
   private static void thirdMain() {
-    Animal dog = new Animal("pug");
+    Animal dog = new Animal("german shepherd");
     Human gordo = new Human();
     gordo.name = "Victor";
     gordo.feed();
-    dog.feed("karma");
+    dog.feed("purina");
 
   }
 
-  private static void secondMain() {
-    Human buyer = new Human();
+  private static void secondTask() {
     Human seller = new Human();
+    Human gordo = new Human();
+    gordo.firstName = "Victor";
     double price = 10;
 
     Car mercedes = new Diesel("mercedes", "no se", 2020, 120.0);
+    Car optra = new Diesel("chevrolet", "bonito", 2003, 105.0);
+    Car aveo = new ElectricCar("tesla", "the best", 2019, 130.0);
+    seller.cars = new Car[] {mercedes, optra, aveo};
 
-    mercedes.sell(buyer, seller, price);
+    System.out.println(gordo + " has " + gordo.cars.length + " cars");
+    mercedes.sell(gordo, seller, price);
+
+    System.out.println(gordo + " has " + gordo.cars.length + " cars");
   }
 
   private static void firstMain() throws Exception {
@@ -62,7 +70,11 @@ public class Main {
     gordo.pet = dog;
     gordo.mobile = motorola;
 
-    System.out.println("It is the same car " + (me.car == gordo.car));
+    Human tony = new Human();
+    gordo.firstName = "Anthony";
+    gordo.lastName = "Miller";
+    gordo.pet = dog;
+    gordo.mobile = iphone;
 
 
     me.pet.feed();
@@ -72,13 +84,16 @@ public class Main {
     me.pet.takeForAWalk();
     me.pet.takeForAWalk();
     me.pet.takeForAWalk();
+
+
+    System.out.println("It is the same car " + (me.cars == gordo.cars));
 
     Car dirtyOne = new Diesel("fiat", "bravo", 2014, 1.6);
     dirtyOne.plates = "GDA2314";
-    me.car = dirtyOne;
-    System.out.println(me.car.producer + " " + me.car.model + " " + me.car.plates);
+    me.cars[2] = dirtyOne;
+    System.out.println(me.cars[2].producer + " " + me.cars[2].model + " " + me.cars[2].plates);
 
-    System.out.println(me instanceof Animal);
+    System.out.println("This is my first car" + me.cars[1]);
     System.out.println(me instanceof Human);
     System.out.println(me instanceof Object);
 
@@ -92,12 +107,12 @@ public class Main {
     System.out.println("test");
 
 
-   String[] names = {"Fabiana", "Victor", "Elto"};
-   Integer[] number = {2314, 3212, -2212};
+    String[] names = {"Fabiana", "Victor", "Elto"};
+    Integer[] number = {2314, 3212, -2212};
 
-   for(int i = 0; i<names.length; i++){
+    for (int i = 0; i < names.length; i++) {
 
-   }
+    }
     Arrays.sort(names);
     System.out.println(Arrays.toString(names));
 

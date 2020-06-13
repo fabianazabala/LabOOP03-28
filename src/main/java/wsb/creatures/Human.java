@@ -1,5 +1,7 @@
 package wsb.creatures;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import wsb.devices.Car;
 import wsb.devices.Phone;
 
@@ -8,14 +10,14 @@ public class Human extends Animal {
   public String lastName;
   public Animal pet;
   public Phone mobile;
-  public Car car;
+  public Car[] cars = new Car[0];
 
   protected String phoneNumber;
   private Double salary;
   public Double cash = 100.0;
 
   public Human() {
-    super("homo sapiens");
+    super("homo-sapiens");
   }
 
   public Double getSalary() {
@@ -35,6 +37,19 @@ public class Human extends Animal {
   }
 
   public void feed(String food) {
-      System.out.println("Thanks for " + food);
+    System.out.println("Thanks for " + food);
+  }
+
+  public double sumValueOfCars() {
+    double result = 0.0;
+    for (int i = 0; i <= cars.length; i++) {
+      result += cars[i].price;
+    }
+    return result;
+  }
+  public Car[] sortCarsByYearOfProduction(){
+    Arrays.sort(cars, Comparator.comparing(car1 -> car1.yearOfProduction));
+    return cars;
   }
 }
+
