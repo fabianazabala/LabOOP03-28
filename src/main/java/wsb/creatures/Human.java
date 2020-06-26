@@ -11,17 +11,30 @@ public class Human extends Animal {
   public Animal pet;
   public Phone mobile;
   public Car[] cars = new Car[0];
-
-  protected String phoneNumber;
-  private Double salary;
   public Double cash = 100.0;
 
+  protected String phoneNumber;
+
+  private Double salary;
+
   public Human() {
+
     super("homo-sapiens");
   }
 
   public Double getSalary() {
+
     return salary;
+  }
+
+  public void setTransaction(Double salary) {
+    if (salary < 0) {
+      System.out.println("This is not possible");
+    }
+    System.out.println("New data has been sent to account system");
+    System.out.println("If you need any help, please contact Ms. Joanna from the front office");
+    System.out.println("Public Health Insurance Tax Office has to know about this salary change");
+    this.salary = salary;
   }
 
   public void sell(Human buyer, Human seller, double price) throws Exception {
@@ -33,6 +46,7 @@ public class Human extends Animal {
   }
 
   public String toString() {
+
     return firstName;
   }
 
@@ -47,9 +61,11 @@ public class Human extends Animal {
     }
     return result;
   }
-  public Car[] sortCarsByYearOfProduction(){
+
+  public Car[] sortCarsByYearOfProduction() {
     Arrays.sort(cars, Comparator.comparing(car1 -> car1.yearOfProduction));
     return cars;
   }
+
 }
 

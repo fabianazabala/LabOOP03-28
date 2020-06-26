@@ -10,13 +10,21 @@ public class Phone extends Device {
     this.screenSize = screenSize;
   }
 
-  public void installAnApp(String name, Double version) {
+ /* public void installAnApp(String name, Double version) {
+    if(app.getPrice() > 0){
+      if(owner.cash < app.getPrice()){
+        throw new Exception("not enough money");
+      }
+      owner.cash -= app.getPrice();
+      applications.add(app);
+
+    }
     System.out.println("The app " + name + " was installed in version " + version);
-  }
+  } */
 
   @Override
   public void turnOn() {
-    System.out.println("phone is turned on");
+    System.out.println("the phone is turned on");
   }
 
   @Override

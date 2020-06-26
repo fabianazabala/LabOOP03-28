@@ -71,6 +71,7 @@ public class Animal implements Soldable, Edible, Feedable {
   }
 
   Double getWeight() {
+
     return weight;
   }
 

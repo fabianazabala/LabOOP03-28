@@ -3,6 +3,7 @@ package wsb;
 import java.util.Arrays;
 import wsb.creatures.Animal;
 import wsb.creatures.Human;
+import wsb.database.Connector;
 import wsb.devices.Car;
 import wsb.devices.Diesel;
 import wsb.devices.ElectricCar;
@@ -11,7 +12,9 @@ import wsb.devices.Phone;
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    secondTask();
+    Human anna = new Human();
+    anna.setTransaction(200.30);
+
   }
 
   private static void fourthMain() {
@@ -102,6 +105,7 @@ public class Main {
 
     iphone.turnOn();
     dirtyOne.turnOn();
+
 
 
     System.out.println("test");
