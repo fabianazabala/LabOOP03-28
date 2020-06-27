@@ -30,10 +30,10 @@ public abstract class Car extends Device {
   @Override
   public void sell(Human buyer, Human seller, double price) {
     if (buyer.cash >= price) {
-      buyer.cars =  addToGarage(buyer.cars);
+      buyer.setCars(addToGarage(buyer.getCars()));
       buyer.cash = buyer.cash - price;
       seller.cash = seller.cash + price;
-      seller.cars = removeFromGarage(seller.cars);
+      seller.setCars(removeFromGarage(seller.getCars()));
       System.out.println(buyer + " just bought a new " + producer);
     } else {
       throw new RuntimeException("You do not have enough cash to buy a car");

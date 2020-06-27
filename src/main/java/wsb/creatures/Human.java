@@ -10,7 +10,7 @@ public class Human extends Animal {
   public String lastName;
   public Animal pet;
   public Phone mobile;
-  public Car[] cars = new Car[0];
+  private Car[] cars = new Car[0];
   public Double cash = 100.0;
 
   protected String phoneNumber;
@@ -67,5 +67,21 @@ public class Human extends Animal {
     return cars;
   }
 
+  public Car[] getCars() {
+    return cars;
+  }
+
+  public void setCars(Car[] cars) {
+    if(salary>cars[0].price){
+      System.out.println("the car is being bought");
+      this.cars = cars;
+    }
+    else if (salary > cars[0].price / 12) {
+      System.out.println("the car has been bought by card");
+      this.cars = cars;
+    } else {
+      System.out.println("Go to school and find a better job in order to afford this car");
+    }
+  }
 }
 
