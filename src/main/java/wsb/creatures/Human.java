@@ -2,8 +2,8 @@ package wsb.creatures;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import wsb.devices.Car;
-import wsb.devices.Phone;
+import wsb.devices.carphone.Car;
+import wsb.devices.carphone.Phone;
 
 public class Human extends Animal {
   public String firstName;
@@ -45,11 +45,6 @@ public class Human extends Animal {
     throw new Exception("don't do this freak");
   }
 
-  public String toString() {
-
-    return firstName;
-  }
-
   public void feed(String food) {
     System.out.println("Thanks for " + food);
   }
@@ -82,6 +77,23 @@ public class Human extends Animal {
     } else {
       System.out.println("Go to school and find a better job in order to afford this car");
     }
+  }
+
+  @Override
+  public String toString() {
+    return "Human{" +
+        "firstName='" + firstName + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", pet=" + pet +
+        ", mobile=" + mobile +
+        ", cars=" + Arrays.toString(cars) +
+        ", cash=" + cash +
+        ", phoneNumber='" + phoneNumber + '\'' +
+        ", salary=" + salary +
+        ", species='" + species + '\'' +
+        ", name='" + name + '\'' +
+        ", pic=" + pic +
+        '}';
   }
 }
 

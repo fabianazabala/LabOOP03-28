@@ -9,4 +9,13 @@ public class FarmAnimal extends Animal implements Edible, Feedable {
   public void feed(Double foodWeight) {
 
   }
+
+  @Override
+  public String toString() {
+    return "FarmAnimal{" +
+        "species='" + species + '\'' +
+        ", name='" + name + '\'' +
+        ", pic=" + pic +
+        '}';
+  }
 }

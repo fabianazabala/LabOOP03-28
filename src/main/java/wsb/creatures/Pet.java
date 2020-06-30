@@ -10,4 +10,12 @@ public class Pet extends Animal {
     super.eat();
   }
 
+  @Override
+  public String toString() {
+    return "Pet{" +
+        "species='" + species + '\'' +
+        ", name='" + name + '\'' +
+        ", pic=" + pic +
+        '}';
+  }
 }

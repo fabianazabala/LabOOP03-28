@@ -15,5 +15,11 @@ public abstract class Device implements Soldable {
     return this.model;
   }
 
-
+  @Override
+  public String toString() {
+    return "Device{" +
+        "producer='" + producer + '\'' +
+        ", model='" + model + '\'' +
+        '}';
+  }
 }

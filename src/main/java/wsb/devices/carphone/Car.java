@@ -1,12 +1,11 @@
-package wsb.devices;
+package wsb.devices.carphone;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.Objects;
 import wsb.creatures.Human;
+import wsb.devices.Device;
 
 public abstract class Car extends Device {
   public final Integer yearOfProduction;
@@ -40,6 +39,26 @@ public abstract class Car extends Device {
     }
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Car car = (Car) o;
+    return Double.compare(car.price, price) == 0 &&
+        Objects.equals(yearOfProduction, car.yearOfProduction) &&
+        Objects.equals(sizeOfAnEngine, car.sizeOfAnEngine) &&
+        Objects.equals(plates, car.plates);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(yearOfProduction, sizeOfAnEngine, plates, price);
+  }
+
   private Car[] addToGarage(Car[] garage) {
     List<Car> carList = garage == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(garage));
     carList.add(this);
@@ -50,5 +69,17 @@ public abstract class Car extends Device {
     List<Car> carList = new ArrayList<>(Arrays.asList(garage));
     carList.remove(this);
     return carList.toArray(new Car[0]);
+  }
+
+  @Override
+  public String toString() {
+    return "Car{" +
+        "yearOfProduction=" + yearOfProduction +
+        ", sizeOfAnEngine=" + sizeOfAnEngine +
+        ", plates='" + plates + '\'' +
+        ", price=" + price +
+        ", producer='" + producer + '\'' +
+        ", model='" + model + '\'' +
+        '}';
   }
 }

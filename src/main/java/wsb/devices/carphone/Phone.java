@@ -1,6 +1,7 @@
-package wsb.devices;
+package wsb.devices.carphone;
 
 import wsb.creatures.Human;
+import wsb.devices.Device;
 
 public class Phone extends Device {
   final Double screenSize;
@@ -30,5 +31,14 @@ public class Phone extends Device {
   @Override
   public void sell(Human buyer, Human seller, double price) throws Exception {
 
+  }
+
+  @Override
+  public String toString() {
+    return "Phone{" +
+        "screenSize=" + screenSize +
+        ", producer='" + producer + '\'' +
+        ", model='" + model + '\'' +
+        '}';
   }
 }

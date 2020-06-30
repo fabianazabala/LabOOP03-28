@@ -3,17 +3,23 @@ package wsb;
 import java.util.Arrays;
 import wsb.creatures.Animal;
 import wsb.creatures.Human;
-import wsb.database.Connector;
-import wsb.devices.Car;
+import wsb.devices.carphone.Car;
 import wsb.devices.Diesel;
 import wsb.devices.ElectricCar;
-import wsb.devices.Phone;
+import wsb.devices.carphone.Phone;
 
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    Human anna = new Human();
-    anna.setTransaction(200.30);
+    Car logan = new Diesel("Renault", "Logan2", 2010, 200.0);
+    Car fusion = new ElectricCar("Chevrolet", "x10", 2013, 301.05);
+
+    System.out.println(logan.equals(fusion));
+
+    Car neon = new Diesel("Dodge", "Neon", 2000, 120.20);
+    Car neon2 = new Diesel("Dodge", "Neon", 2000, 120.20);
+
+    System.out.println(neon.equals(neon2));
 
   }
 
@@ -45,12 +51,12 @@ public class Main {
     Car mercedes = new Diesel("mercedes", "no se", 2020, 120.0);
     Car optra = new Diesel("chevrolet", "bonito", 2003, 105.0);
     Car aveo = new ElectricCar("tesla", "the best", 2019, 130.0);
-    seller.cars = new Car[] {mercedes, optra, aveo};
+    seller.setCars(new Car[] {mercedes, optra, aveo});
 
-    System.out.println(gordo + " has " + gordo.cars.length + " cars");
+    System.out.println(gordo + " has " + gordo.getCars().length + " cars");
     mercedes.sell(gordo, seller, price);
 
-    System.out.println(gordo + " has " + gordo.cars.length + " cars");
+    System.out.println(gordo + " has " + gordo.getCars().length + " cars");
   }
 
   private static void firstMain() throws Exception {
@@ -89,14 +95,14 @@ public class Main {
     me.pet.takeForAWalk();
 
 
-    System.out.println("It is the same car " + (me.cars == gordo.cars));
+    System.out.println("It is the same car " + (me.getCars() == gordo.getCars()));
 
     Car dirtyOne = new Diesel("fiat", "bravo", 2014, 1.6);
     dirtyOne.plates = "GDA2314";
-    me.cars[2] = dirtyOne;
-    System.out.println(me.cars[2].producer + " " + me.cars[2].model + " " + me.cars[2].plates);
+    me.getCars()[2] = dirtyOne;
+    System.out.println(me.getCars()[2].producer + " " + me.getCars()[2].model + " " + me.getCars()[2].plates);
 
-    System.out.println("This is my first car" + me.cars[1]);
+    System.out.println("This is my first car" + me.getCars()[1]);
     System.out.println(me instanceof Human);
     System.out.println(me instanceof Object);
 
