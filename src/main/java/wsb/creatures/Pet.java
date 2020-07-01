@@ -1,6 +1,8 @@
 package wsb.creatures;
 
-public class Pet extends Animal {
+import wsb.devices.Saleable;
+
+public class Pet extends Animal implements Saleable {
   public Pet(String species) {
     super(species);
   }

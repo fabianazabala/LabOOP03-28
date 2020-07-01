@@ -1,6 +1,6 @@
 package wsb.devices;
 
-public abstract class Device implements Soldable {
+public abstract class Device implements Saleable {
   final public String producer;
   final public String model;
 

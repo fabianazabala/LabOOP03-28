@@ -2,7 +2,7 @@ package wsb.devices;
 
 import wsb.devices.carphone.Car;
 
-public class Diesel extends Car {
+public class Diesel extends Car implements Saleable {
   public Diesel(String producer, String model, Integer yearOfProduction, Double sizeOfAnEngine) {
     super(producer, model, yearOfProduction, sizeOfAnEngine);
   }

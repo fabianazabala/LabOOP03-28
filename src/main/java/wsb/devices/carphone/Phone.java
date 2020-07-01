@@ -2,8 +2,9 @@ package wsb.devices.carphone;
 
 import wsb.creatures.Human;
 import wsb.devices.Device;
+import wsb.devices.Saleable;
 
-public class Phone extends Device {
+public class Phone extends Device implements Saleable {
   final Double screenSize;
 
   public Phone(String producer, String model, Double screenSize) {

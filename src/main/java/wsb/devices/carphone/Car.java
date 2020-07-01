@@ -6,8 +6,9 @@ import java.util.List;
 import java.util.Objects;
 import wsb.creatures.Human;
 import wsb.devices.Device;
+import wsb.devices.Saleable;
 
-public abstract class Car extends Device {
+public abstract class Car extends Device implements Saleable {
   public final Integer yearOfProduction;
   public final Double sizeOfAnEngine;
   public String plates;

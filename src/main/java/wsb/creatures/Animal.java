@@ -1,9 +1,9 @@
 package wsb.creatures;
 
 import java.io.File;
-import wsb.devices.Soldable;
+import wsb.devices.Saleable;
 
-public class Animal implements Soldable, Edible, Feedable {
+public class Animal implements Saleable, Edible, Feedable {
   final String species;
   private Double weight;
   public String name;

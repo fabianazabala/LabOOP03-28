@@ -2,16 +2,17 @@ package wsb.creatures;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import wsb.devices.Saleable;
 import wsb.devices.carphone.Car;
 import wsb.devices.carphone.Phone;
 
-public class Human extends Animal {
+public class Human extends Animal implements Saleable {
   public String firstName;
   public String lastName;
   public Animal pet;
   public Phone mobile;
   private Car[] cars = new Car[0];
-  public Double cash = 100.0;
+  public Double cash = 50.0;
 
   protected String phoneNumber;
 
