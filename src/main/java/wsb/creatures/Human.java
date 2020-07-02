@@ -46,6 +46,11 @@ public class Human extends Animal implements Saleable {
     throw new Exception("don't do this freak");
   }
 
+  @Override
+  public void beEaten() throws Exception {
+
+  }
+
   public void feed(String food) {
     System.out.println("Thanks for " + food);
   }

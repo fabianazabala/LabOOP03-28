@@ -13,6 +13,11 @@ public class Pet extends Animal implements Saleable {
   }
 
   @Override
+  public void beEaten() throws Exception {
+
+  }
+
+  @Override
   public String toString() {
     return "Pet{" +
         "species='" + species + '\'' +

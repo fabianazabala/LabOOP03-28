@@ -3,6 +3,7 @@ package wsb;
 import java.util.Arrays;
 import wsb.creatures.Animal;
 import wsb.creatures.Human;
+import wsb.creatures.Pet;
 import wsb.devices.carphone.Car;
 import wsb.devices.Diesel;
 import wsb.devices.ElectricCar;
@@ -11,7 +12,9 @@ import wsb.devices.carphone.Phone;
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    Car logan = new Diesel("Renault", "Logan2", 2010, 200.0);
+
+    thirdMain();
+   /* Car logan = new Diesel("Renault", "Logan2", 2010, 200.0);
     Car fusion = new ElectricCar("Chevrolet", "x10", 2013, 301.05);
 
     System.out.println(logan.equals(fusion));
@@ -20,6 +23,8 @@ public class Main {
     Car neon2 = new Diesel("Dodge", "Neon", 2000, 120.20);
 
     System.out.println(neon.equals(neon2));
+
+    */
 
   }
 
@@ -34,7 +39,7 @@ public class Main {
   }
 
   private static void thirdMain() {
-    Animal dog = new Animal("german shepherd");
+    Animal dog = new Pet("german shepherd");
     Human gordo = new Human();
     gordo.name = "Victor";
     gordo.feed();
@@ -60,7 +65,7 @@ public class Main {
   }
 
   private static void firstMain() throws Exception {
-    Animal dog = new Animal("dog");
+    Animal dog = new Pet("dog");
     dog.name = "Pepe";
 
     Phone iphone = new Phone("Apple", "6s", 4.7);

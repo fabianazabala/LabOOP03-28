@@ -3,7 +3,7 @@ package wsb.creatures;
 import java.io.File;
 import wsb.devices.Saleable;
 
-public class Animal implements Saleable, Edible, Feedable {
+public abstract class Animal implements Saleable, Edible, Feedable {
   final String species;
   private Double weight;
   public String name;

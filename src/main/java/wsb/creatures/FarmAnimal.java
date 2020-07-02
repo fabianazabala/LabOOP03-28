@@ -20,4 +20,9 @@ public class FarmAnimal extends Animal implements Edible, Feedable, Saleable {
         ", pic=" + pic +
         '}';
   }
+
+  @Override
+  public void beEaten() throws Exception {
+
+  }
 }
